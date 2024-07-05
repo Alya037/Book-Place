@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Book Place</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <img src="img/Logo3.png" alt="Логотип">
+    <a class="active" href="#">Главная</a>
+    <div class="dropdown">
+      <button class="dropbtn">Каталог &#9660;</button>
+      <div class="dropdown-content">
+        <a href="site pages/artistic.html">Художественная литература</a>
+        <a href="site pages/kids.html">Детская литература</a>
+        <a href="site pages/comics.html">Комиксы</a>
+        <a href="site pages/foreign.html">Книги на иностранных языках</a>
+      </div>
+    </div>
+    <a href="site pages/compilations.html">Подборки книг</a>
+    <a href="site pages/stocks.html">Акции</a>
+    <div class="cart-icon" id="cart-icon">
+      <img src="img/cart.png" alt="Корзина">
+    <span id="cart-count">0</span>
+</div>
+<div class="cart-popup" id="cart-popup">
+    <div class="cart-header">
+      <h2>Товары в корзине</h2>
+      
+    </div>
+    <ul id="cart-items-list"></ul> 
+    <div class="cart-total">
+      <p>Итого: <span id="cart-total-price">0</span> &#8381;</p>
+      <button class="close" onclick="closeCart()">Закрыть</button>
+      <button id="clear-cart-button">Очистить корзину</button>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="all">
+    <input checked type="radio" name="respond" id="desktop">
+      <article id="slider">
+        <input checked type="radio" name="slider" id="switch1">
+        <input type="radio" name="slider" id="switch2">
+        <input type="radio" name="slider" id="switch3">
+        <input type="radio" name="slider" id="switch4">
+        <div id="slides">
+          <div id="overflow">
+            <div class="image">
+              <article><img src="img/w1.png"></article>
+              <article><img src="img/w2.png"></article>
+              <article><img src="img/w3.png"></article>
+              <article><img src="img/w4.png"></article>
+            </div>
+          </div>
+        </div>
+        <div id="controls">
+          <label for="switch1"></label>
+          <label for="switch2"></label>
+          <label for="switch3"></label>
+          <label for="switch4"></label>
+        </div>
+        <div id="active">
+          <label for="switch1"></label>
+          <label for="switch2"></label>
+          <label for="switch3"></label>
+          <label for="switch4"></label>
+        </div>
+      </article>
+  </div>
+  <div class="chapter">
+    <p><a href="site pages/new.html" class="color-change-link">НОВИНКИ ЛИТЕРАТУРЫ</a></p>
+  </div>
+
+  <div class="product-card" id="product1">
+    <img src="img/books/БП.png" alt="Product Image">
+    <h1>Бояться поздно</h1>
+    <h2>756 &#8381;</h2>
+    <p>Шамиль Идиатуллин</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product1" data-product-name="Бояться поздно" data-product-price="756">Добавить в корзину</button>
+  </div>
+
+    <div class="product-card" id="product2">
+    <img src="img/books/магия белых ночей.png" alt="Product Image">
+    <h1>Магия белых ночей</h1>
+    <h2>581 &#8381;</h2>
+    <p>Екатерина Каблукова, Эля Рин, Татьяна Серганова</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product2" data-product-name="Магия белых ночей" data-product-price="581">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product3">
+    <img src="img/books/мбв.png" alt="Product Image">
+    <h1>Магазинчик бесценных вещей</h1>
+    <h2>633 &#8381;</h2>
+    <p>Лоренца Джентиле</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product3" data-product-name="Магазинчик бесценных вещей" data-product-price="633">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product4">
+    <img src="img/books/огонь.png" alt="Product Image">
+    <h1>Огонь</h1>
+    <h2>494 &#8381;</h2>
+    <p>Лена Сокол</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product4" data-product-name="Огонь" data-product-price="494">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product5">
+    <img src="img/books/охотник.png" alt="Product Image">
+    <h1>Охотник</h1>
+    <h2>802 &#8381;</h2>
+    <p>Тана Френч</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product5" data-product-name="Охотник" data-product-price="802">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product6">
+    <img src="img/books/Майор гром.png" alt="Product Image">
+    <h1>Майор гром. Том 5. Игра</h1>
+    <h2>1049 &#8381;</h2>
+    <p>Артём Габрелянов</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product6" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+  <div class="chapter">
+    <p><a href="site pages/best.html" class="color-change-link">ЛУЧШИЕ ИЗ ЛУЧШИХ</a></p>
+  </div>
+
+  <div class="product-card" id="product7">
+    <img src="img/books/ПВиМ.png" alt="Product Image">
+    <h1>Принцесса ветра и мести</h1>
+    <h2>688 &#8381;</h2>
+    <p>Алиса Джукич</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product7" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+  </div>
+
+    <div class="product-card" id="product8">
+    <img src="img/books/СР.png" alt="Product Image">
+    <h1>Служебный роман</h1>
+    <h2>269 &#8381;</h2>
+    <p>Эмиль Брагинский, Эльдар Рязанов</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product8" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product9">
+    <img src="img/books/ЧН.png" alt="Product Image">
+    <h1>Человек недостойный</h1>
+    <h2>239 &#8381;</h2>
+    <p>Дадзай Осаму</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product9" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product10">
+    <img src="img/books/ДвК.png" alt="Product Image">
+    <h1>Дом, в котором...(подарочное издание)</h1>
+    <h2>1588 &#8381;</h2>
+    <p>Мариам Петросян</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product10" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product11">
+    <img src="img/books/ГЛ.png" alt="Product Image">
+    <h1>Гипотеза любви</h1>
+    <h2>673 &#8381;</h2>
+    <p>Али Хейзелвуд</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product11" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product12">
+    <img src="img/books/ТСБР.png" alt="Product Image">
+    <h1>Твоё сердце будет разбито</h1>
+    <h2>329 &#8381;</h2>
+    <p>Анна Джейн</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product12" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="chapter">
+    <p><a href="site pages/myths.html" class="color-change-link">КНИГИ О БОГАХ И ДЕМОНАХ</a></p>
+  </div>
+
+  <div class="product-card" id="product13">
+    <img src="img/books/МК.png" alt="Product Image">
+    <h1>Мифы Китая</h1>
+    <h2>644 &#8381;</h2>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product13" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product14">
+    <img src="img/books/СМ.png" alt="Product Image">
+    <h1>Скандинавские мифы</h1>
+    <h2>625 &#8381;</h2>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product14" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product15">
+    <img src="img/books/МОР.png" alt="Product Image">
+    <h1>Мифы о русалках</h1>
+    <h2>915 &#8381;</h2>
+    <p>Кристина Баккилега, Мари Алохани Браун</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product15" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product16">
+    <img src="img/books/КБ.png" alt="Product Image">
+    <h1>Карельские боги</h1>
+    <h2>1150 &#8381;</h2>
+    <p>Татьяна Бердашева</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product16" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product17">
+    <img src="img/books/Ввм.png" alt="Product Image">
+    <h1>Введение в мифологию</h1>
+    <h2>917 &#8381;</h2>
+    <p>Александра Баркова</p>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product17" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+
+    <div class="product-card" id="product18">
+    <img src="img/books/ПД.png" alt="Product Image">
+    <h1>Проклятые души</h1>
+    <h2>1334 &#8381;</h2>
+    <div class="rating">
+      <span class="rating-text">Рейтинг:</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9733;</span>
+      <span class="star">&#9734;</span>
+    </div>
+    <a href="product-page.html" class="view-button">Просмотреть товар</a>
+    <button class="add-to-cart-button" data-product-id="product18" data-product-name="h1" data-product-price="h2">Добавить в корзину</button>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Находим элементы
+  const cartCounter = document.getElementById('cart-count');
+  const cartPopup = document.getElementById('cart-popup');
+  const cartItemsList = document.getElementById('cart-items-list');
+  const cartIcon = document.getElementById('cart-icon');
+  const closeBtn = document.querySelector('.close');
+  const clearCartButton = document.getElementById('clear-cart-button'); 
+  let cartItems = []; // Массив для хранения товаров в корзине
+  let totalPrice = 0; // Инициализация общей цены
+
+  // Загружаем данные из локального хранилища при загрузке страницы
+  loadCartFromLocalStorage();
+
+  // Функция для обновления счетчика
+  function updateCartCounter() {
+    cartCounter.textContent = cartItems.length; // Обновляем счетчик с помощью длины массива
+  }
+
+  // Функция для очистки корзины и обновления popup
+  function clearCart() {
+    cartItems = []; // Очищаем массив товаров
+    totalPrice = 0; // Сбрасываем общую цену
+    updateCartCounter();
+    cartItemsList.innerHTML = ''; // Очищаем список товаров в popup
+    updateTotalAmount(); // Обновляем общую цену в popup
+    saveCartToLocalStorage(); // Сохраняем изменения в локальном хранилище
+  }
+
+  // Добавляем обработчик события для кнопки очистки корзины
+  clearCartButton.addEventListener('click', function() {
+    clearCart();
+  });
+
+  // Функция для добавления продукта в корзину и обновления содержимого popup
+  function addToCartAndUpdatePopup(productName, productPrice) {
+    // Добавляем продукт в массив товаров
+    cartItems.push({
+      name: productName,
+      price: parseInt(productPrice) // Преобразуем цену в число
+    });
+
+    // Обновляем счетчик
+    updateCartCounter();
+
+    // Добавляем продукт в список внутри popup
+    const listItem = document.createElement('li');
+    listItem.innerText = productName + ' - ' + productPrice + ' руб.';
+    cartItemsList.appendChild(listItem);
+
+    // Обновляем общую цену
+    totalPrice += parseInt(productPrice);
+    updateTotalAmount();
+
+    // Сохраняем изменения в локальном хранилище
+    saveCartToLocalStorage();
+  }
+
+  // Выбираем все кнопки "Добавить в корзину" и добавляем к ним обработчики событий
+  const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const productCard = button.closest('.product-card');
+      const productName = productCard.querySelector('h1').innerText;
+      const productPrice = productCard.querySelector('h2').innerText;
+      addToCartAndUpdatePopup(productName, productPrice);
+    });
+  });
+
+  // Функция для обновления общей цены в popup
+  function updateTotalAmount() {
+    const totalAmountElement = document.getElementById('cart-total-price');
+    totalAmountElement.textContent = totalPrice; // Обновляем общую цену
+  }
+
+  // Обработчик события для закрытия popup
+  closeBtn.addEventListener('click', function() {
+    cartPopup.style.display = 'none';
+  });
+
+  // Обработчик события для открытия popup по нажатию на изображение корзины
+  cartIcon.addEventListener('click', function() {
+    cartPopup.style.display = 'block';
+  });
+
+  // Функция для сохранения данных корзины в локальное хранилище
+  function saveCartToLocalStorage() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('totalPrice', totalPrice);
+  }
+
+  // Функция для загрузки данных корзины из локального хранилища
+  function loadCartFromLocalStorage() {
+    const storedCartItems = localStorage.getItem('cartItems');
+    if (storedCartItems) {
+      cartItems = JSON.parse(storedCartItems);
+      totalPrice = parseInt(localStorage.getItem('totalPrice') || 0);
+      updateCartCounter();
+      // Отрисовка товаров в popup
+      cartItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerText = item.name + ' - ' + item.price + ' руб.';
+        cartItemsList.appendChild(listItem);
+      });
+      updateTotalAmount();
+    }
+  }
+});
+
+</script>
+</body>
+</html>
